@@ -1,0 +1,107 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link href='https://fonts.googleapis.com/css?family=Cedarville+Cursive' rel='stylesheet' type='text/css'>
+</head>
+<body style="zoom:2" onclick="onClick()">
+	<div class="container">
+		<div class="thorns">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+		<div class="glow" id="glow" style="opacity:0"></div>
+		<div class="rose-leaves">
+			<div></div>
+			<div></div>
+		</div>
+		<div class="rose-petals">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+		<div class="sparkles" id="sparkles" style="display: none;">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</div>
+	<div id="content" style="display:none;color:darkgrey; text-align: center;line-height:2em;width:100%;height:200px;left:0%;bottom:5%;position: absolute;font-family:'Cedarville Cursive', cursive; font-weight: normal; font-size: 2em;">love you forever<br/>Marry me</div>
+
+	<script>
+		var count = 0;
+		function onClick() {
+			const contents = [
+				"Can't stop missing you", 
+				"Love you forever", 
+				"You are my today and all of my tomorrows",
+				"Love to the depths, is lonely", 
+				"I want to grow old with you together", 
+				"Love a person, you will be love", 
+				"If you have been, and I will always love", 
+				"Love, it is smiling drink wine", 
+				"Love this thing, never humble", 
+				"You are always in your mind is so beautiful", 
+				"I think I have a crush on you for a long time", 
+				"Meet, not hate late, early is hate", 
+				"The most severe virus is love and lies", 
+				"Did meet, the total is better than never to meet", 
+				"For you, no matter rain or shine round, also the same", 
+				"Love you, hide in my heart, warm in your heart!",
+				"Even if it is the end of the world, I will love you", 
+				"Tired, just put down, don't hurt yourself! ",
+				"You don't love me, I will protect you for my whole life", 
+				"I want to live in such dull with you", 
+				"I'd like to change into the wind, the tender will be surrounded by you", 
+				"You are my he city, you are my him", 
+				"Waiting for you to determine your own heart, and then come to me", 
+				"My cat is skin, can you help me to mind", 
+				"True, lost you, won the world again how? ",
+				"Even if you don't love me, I will protect you forever", 
+				"Fleeting love, I am willing to follow forever", 
+				"Familiar and unfamiliar, can brush", 
+				"If I met you, I will hold you tight", 
+				"I promise you anything. You are my one and only", 
+				"Began after, when I don't know what I have learned to rely on", 
+				"Throughout his life, we are all looking for happiness", 
+				"Since want to love, don't be afraid of thin, don't be afraid of being let down", 
+				"I do not know what when begin, I have learned to rely on", 
+				"Think about it and I see the sun rising and sunset joy", 
+				"Matter can contented heart often tiger, people from the high to nothing", 
+				"Not lost, only can wanton of one's affection", 
+				"I want to be you, see what you see, love what you love",
+				"Hey, Si Ying ! My Love",
+				"Will you Marry me ? "
+			];
+			
+			document.getElementById("glow").style.opacity = parseFloat(count)/ parseFloat(contents.length);
+
+			document.getElementById("content").style.display = "block";
+			if (count == contents.length - 2)
+			{
+				document.getElementById("content").style.color="azure";
+			}
+
+			if (count == contents.length - 1)
+			{
+				document.getElementById("content").style.color="pink";
+				document.getElementById("sparkles").style.display = "block";
+			}
+			if (count < contents.length)
+			{
+				document.getElementById("content").innerText = contents[count++];
+			}
+		}
+	</script>
+</body>
